@@ -3,45 +3,52 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Privacy Policy · Kumquat Demo</title>
+  <title>Privacy Policy · Kumquat</title>
   <link rel="stylesheet" href="site.css">
 </head>
 <body>
   <main class="page">
-    <p class="brand"><a href="./">Kumquat Demo</a></p>
+    <p class="brand"><a href="./">Kumquat</a></p>
     <h1>Privacy Policy</h1>
-    <p class="lead">For the Kumquat Demo and Kumquat Rider Demo apps on Google Play. Last updated 10 November 2026.</p>
+    <p class="lead">For the Kumquat and Kumquat Rider apps on Google Play. Last updated 10 November 2026.</p>
 
     <section>
       <h2>What these apps are</h2>
-      <p>Kumquat Demo and Kumquat Rider Demo are portfolio demonstrations of a food-delivery system. The restaurants, menus, riders and customers in them are fictional. Orders, payments and deliveries are simulated: no food is delivered, no money is taken, and no card details are ever asked for.</p>
+      <p><strong>Kumquat currently uses fictional restaurants and simulated transactions. No real charges or physical deliveries occur.</strong></p>
+      <p>Kumquat and Kumquat Rider are a portfolio project that shows how a food-delivery system works. The restaurants, menus, riders and customers in them are fictional. Orders, payments and deliveries are simulated, and no card details are ever asked for.</p>
       <p>The apps are made and run by an independent developer, the "developer" below. Contact: <a data-support-link href="mailto:mrrobiul.mrj+kumquat@gmail.com">mrrobiul.mrj+kumquat@gmail.com</a>.</p>
     </section>
 
     <section>
-      <h2>Demo sessions</h2>
-      <p>When you tap <strong>Try the demo</strong>, the app creates a demo session on our server. A demo session has no email, password or name. It is identified only by a random ID. The server gives it a fictional name, phone number and address so you can place a simulated order straight away.</p>
-      <p>Every demo session, and everything linked to it, is deleted automatically 7 days after it starts. You can delete it sooner at any time (see <a href="#deletion">Deleting your data</a>).</p>
+      <h2>Guest sessions</h2>
+      <p>When you tap <strong>Explore Kumquat</strong>, the app creates a guest session on our server. A guest session has no email, password or name. It is identified only by a random ID. The server gives it a fictional name, phone number and address so you can place a simulated order straight away.</p>
+      <p>Every guest session, and everything linked to it, is deleted automatically 7 days after it starts. You can delete it sooner at any time (see <a href="#deletion">Deleting your data</a>).</p>
     </section>
 
     <section>
       <h2>What is stored, and why</h2>
       <p>Only what the apps need to work. Nothing is used for advertising, sold, or shared with anyone for their own use.</p>
       <ul>
-        <li><strong>Session ID:</strong> to keep you signed in and keep your demo data separate from everyone else's.</li>
+        <li><strong>Session ID:</strong> to keep you signed in and keep your guest data separate from everyone else's.</li>
         <li><strong>Anything you type in:</strong> a changed display name or phone number, delivery addresses, delivery instructions and support messages. The apps work without any real details, and we ask you not to enter them.</li>
         <li><strong>Simulated orders and deliveries:</strong> what was ordered, simulated prices and status history, so the apps can show progress and history.</li>
-        <li><strong>Rider app, location:</strong> only if you allow it, and only while you are carrying a sample delivery, the app sends your phone's precise position so the delivery screen can track it. It is never collected in the background, and the Customer app never reads your location. You can use <strong>Simulate route</strong> instead and never share a real position. Positions are deleted with the session.</li>
+        <li><strong>Rider app, location:</strong> only if you allow it, and only while you are carrying a sample delivery, the app sends your phone's precise position so the delivery can be followed. It is never collected in the background, and the Kumquat customer app never reads your location. You can use <strong>Simulate route</strong> instead and never share a real position. Positions are deleted with the session. The maps never show or use your phone's own location.</li>
         <li><strong>On your phone only:</strong> your cart, whether you have seen the introduction, and the sign-in session. These are removed when you uninstall the app or clear its data. They are excluded from Android backup.</li>
       </ul>
-      <p>The apps contain no advertising, analytics or crash-reporting tools, and do not use the advertising ID.</p>
+      <p>The apps contain no advertising, analytics or crash-reporting tools of our own, and do not use the advertising ID.</p>
+    </section>
+
+    <section>
+      <h2>Maps by Google</h2>
+      <p>The order tracking map in Kumquat and the delivery map in Kumquat Rider are provided by the Google Maps SDK. When a map is shown, the SDK on your phone contacts Google directly. According to Google, it collects your IP address, device details (operating system version, model, brand and form factor), SDK version and usage information, crash reports and diagnostics from the SDK, a pseudonymous identifier for the Maps SDK, and how you interact with the map. Google uses this to provide, maintain and improve its services; Google says it is not used to identify you or for advertising.</p>
+      <p>The places shown on the map are the fictional restaurant, the fictional delivery address and the simulated position. The apps do not give the Google Maps SDK your phone's location. Google's handling is covered by the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>, and using the maps means accepting the <a href="https://maps.google.com/help/terms_maps/">Google Maps/Google Earth Additional Terms of Service</a>.</p>
     </section>
 
     <section>
       <h2>Who processes data for us</h2>
       <ul>
         <li><strong>Supabase</strong> hosts the server, database and sign-in (servers in Seoul, South Korea). It processes data only on the developer's instructions.</li>
-        <li><strong>OpenStreetMap Foundation</strong> serves the map tiles on the Customer app's order tracking screen. Your phone requests the tiles directly, so the OpenStreetMap servers see your IP address and the map area shown, under the <a href="https://osmfoundation.org/wiki/Privacy_Policy">OSMF Privacy Policy</a>.</li>
+        <li><strong>Google</strong> provides the maps, as described above.</li>
         <li><strong>GitHub Pages</strong> hosts these web pages.</li>
         <li><strong>Google Play</strong> distributes the apps under Google's own privacy policy.</li>
       </ul>
@@ -49,7 +56,7 @@
 
     <section>
       <h2>Security</h2>
-      <p>All traffic between the apps and the server is encrypted (HTTPS). Database rules make each demo session's data readable only by that session. A demo rider sees a sample delivery's fictional address only while carrying it. Server keys never ship in the apps.</p>
+      <p>All traffic between the apps and the server is encrypted (HTTPS). Database rules make each guest session's data readable only by that session. A guest rider sees a sample delivery's fictional address only while carrying it. Server keys never ship in the apps, and the map keys are restricted to these two apps.</p>
     </section>
 
     <section id="deletion">
@@ -59,7 +66,7 @@
         <li><strong>Automatically:</strong> 7 days after the session started.</li>
         <li><strong>On the web:</strong> see <a href="delete-account/">Delete your account</a>, or email the developer with the Session ID shown on your Profile.</li>
       </ul>
-      <p>After deletion, simulated order records may remain only without any name, phone number or street address, so the demo restaurants' figures still add up.</p>
+      <p>After deletion, simulated order records may remain only without any name, phone number or street address, so the fictional restaurants' figures still add up. Data that the Google Maps SDK sent to Google is held by Google under its own policy.</p>
     </section>
 
     <section>
