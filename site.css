@@ -1,0 +1,36 @@
+/* Colours from packages/design_tokens/tokens.json. Brand orange is for large fills
+   only; text and links use the accessible variant. */
+:root {
+  --cream: #fff9f5;
+  --surface: #ffffff;
+  --text: #172033;
+  --muted: #667085;
+  --border: #eadfd6;
+  --accent: #c2410c;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--text);
+  font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+.page {
+  max-width: 44rem;
+  margin: 1rem;
+  padding: 1.5rem 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+}
+@media (min-width: 46rem) { .page { margin: 2rem auto; padding: 2rem 2.5rem; } }
+.brand { margin: 0; font-weight: 800; color: var(--accent); }
+.brand a { color: inherit; text-decoration: none; }
+h1 { margin: 0.25rem 0 0.5rem; font-size: 1.75rem; line-height: 1.2; }
+h2 { font-size: 1.125rem; margin: 1.75rem 0 0.5rem; }
+.lead, .small { color: var(--muted); }
+.small { font-size: 0.875rem; margin-top: 2rem; }
+ul { padding-left: 1.25rem; }
+li { margin-bottom: 0.5rem; }
+a { color: var(--accent); }
+a:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 2px; }

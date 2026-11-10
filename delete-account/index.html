@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Delete your account</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Public settings only: project URL, publishable key, support address. -->
+  <script src="config.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.119.0/dist/umd/supabase.js"
+    integrity="sha384-uteMfOloLDGt042uDz+xHGF3ym63/WQ6rFq7murQRG8Ih7QrXGEGNtWd8688sb4O"
+    crossorigin="anonymous"></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="card">
+    <p class="brand" data-app-name>Kumquat</p>
+    <h1>Delete your account</h1>
+    <p class="lead">Use this page if you no longer have the app. It works for customer and rider accounts.</p>
+
+    <section aria-labelledby="demo">
+      <h2 id="demo">Used "Try the demo"?</h2>
+      <p>A demo session has no email or password, so it cannot sign in on this page. Its data is fictional apart from anything you typed in. To delete it:</p>
+      <ul>
+        <li>In the app, open <strong>Profile</strong>, then <strong>Delete my account</strong>. It is deleted at once.</li>
+        <li>Or do nothing: every demo session and its data are deleted automatically 7 days after it started.</li>
+        <li>Or <a data-support-link href="#">email support</a> with the <strong>Session ID</strong> shown on your Profile, and it is deleted within 7 days.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="what">
+      <h2 id="what">What happens</h2>
+      <ul>
+        <li>Your name, phone number, sign-in, saved addresses, favorites, notifications and vehicle details are deleted.</li>
+        <li>Past orders, payments, deliveries and earnings are kept for accounting, without your name, phone number or street address.</li>
+        <li>Reviews you wrote stay, without your name.</li>
+        <li>If an order or delivery is still in progress, you can delete your account once it is finished.</li>
+        <li>Restaurant and administrator accounts are closed by our team: <a data-support-link href="#">contact support</a>.</li>
+      </ul>
+    </section>
+
+    <div id="status" role="status" aria-live="polite" class="status" hidden></div>
+
+    <!-- Step 1: prove it is your account -->
+    <section id="signin" aria-labelledby="signin-title">
+      <h2 id="signin-title">Sign in to confirm it is you</h2>
+      <form id="password-form" novalidate>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email" required>
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" autocomplete="current-password" required>
+        <button type="submit" class="primary">Sign in</button>
+      </form>
+      <details>
+        <summary>No password, or forgot it?</summary>
+        <form id="link-form" novalidate>
+          <p>We will email you a sign-in link for this page. It only works for an existing account.</p>
+          <label for="link-email">Email for the sign-in link</label>
+          <input id="link-email" name="email" type="email" autocomplete="email" required>
+          <button type="submit">Email me a sign-in link</button>
+        </form>
+      </details>
+    </section>
+
+    <!-- Step 2: confirm -->
+    <section id="confirm" aria-labelledby="confirm-title" hidden>
+      <h2 id="confirm-title">Delete <span data-email></span>?</h2>
+      <p>This cannot be undone. You will not be able to sign in again with this account.</p>
+      <label class="check"><input id="understand" type="checkbox"> I understand that my account will be deleted permanently.</label>
+      <div class="row">
+        <button id="delete" class="danger" disabled>Delete my account</button>
+        <button id="cancel" type="button">Cancel and sign out</button>
+      </div>
+    </section>
+
+    <!-- Step 3: done -->
+    <section id="done" hidden>
+      <h2>Your account has been deleted</h2>
+      <p>You can close this page. If you use the app on another device, it will sign you out.</p>
+    </section>
+
+    <p class="small">Questions about your data? <a data-support-link href="#">Contact support</a>.</p>
+  </main>
+</body>
+</html>
